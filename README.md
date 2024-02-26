@@ -1,12 +1,12 @@
 # create_vsmeta
-python实现群晖Video Station套件中视频文件的vsmeta文件生成
+python实现生成群晖Video Station套件中的vsmeta文件
 
 ## 功能
-通过脚本生成vsmeta文件，修改Video Station中视频信息，目前可以修改电影项目的标题，标语，年份，发布日期，类型，作者，导演，摘要，海报图这几项，基本包含了电影项目的所有信息，其他类型项目暂时还没用到，所以没做
+通过脚本生成vsmeta文件，修改Video Station中视频信息，目前可以修改电影项目的标题，标语，年份，发布日期，类型，作者，导演，摘要，背景图这几项，基本包含了电影项目的所有信息
 >目前在Video Station 3.1.0版本上是有效的
 
 ## 使用
-修改代码中下列值，背景图需要修改背景图的路径名，将背景图放在设置的路径下，然后运行脚本就会生成vsmeta文件
+修改代码中下列数据，然后运行脚本就会生成vsmeta文件
 ```
 if __name__ == '__main__':
 
@@ -25,5 +25,3 @@ if __name__ == '__main__':
 
     make_vsmeta_file('test.mp4.vsmeta', metadata)  # 第一个参数是生成的vsmeta文件的名字，必须是视频文件全名包含后缀名+.vsmeta
 ```
-
-替换vsmeta文件可以先将视频文件改名，再放入vsmeta文件，再将视频文件还原，就可以刷新信息
